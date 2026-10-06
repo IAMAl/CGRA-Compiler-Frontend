@@ -1,0 +1,5 @@
+0 alloca_0 None LEAF
+1 alloca_1 None LEAF
+2 0 None LEAF
+3 store_4 None 0 %1
+4 store_5 None 0 %2

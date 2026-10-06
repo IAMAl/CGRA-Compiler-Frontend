@@ -1,0 +1,5 @@
+0 %2 None LEAF
+1 32 None LEAF
+2 load_7 %6 %2
+3 icmp_slt_8 %7 %6 32
+4 br_9 None %7

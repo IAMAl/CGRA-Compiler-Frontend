@@ -1,0 +1,3 @@
+br_9 %7 label:<55> label:<8>
+icmp_slt_8 %7 32 %6
+load_7 %6 %2

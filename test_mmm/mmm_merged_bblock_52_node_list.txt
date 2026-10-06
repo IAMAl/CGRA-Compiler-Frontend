@@ -1,0 +1,5 @@
+0 store_62 None %54 %2
+1 add_61 %54 %53 1
+2 load_60 %53 %2
+3 %2 None LEAF
+4 1 None LEAF

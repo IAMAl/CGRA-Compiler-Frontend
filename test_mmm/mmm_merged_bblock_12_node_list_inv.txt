@@ -1,0 +1,12 @@
+0 %2 None LEAF
+1 %3 None LEAF
+2 %4 None LEAF
+3 0 None LEAF
+4 load_15 %13 %2
+5 sext_16 %14 %13
+6 getelementptr_@c_17 %15 %14
+7 load_18 %16 %3
+8 sext_19 %17 %16
+9 getelementptr_%15_20 %18 %15 %17
+10 store_21 None 0 %18
+11 store_22 None 0 %4

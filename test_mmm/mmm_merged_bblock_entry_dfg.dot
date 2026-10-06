@@ -1,0 +1,8 @@
+digraph G {
+compound=true
+label="Black Edges - Data-Flow"
+"0" -> "store_5"[color=blue dir=black]
+"alloca_1" -> "store_5"[color=black dir=black label="%2"]
+"0" -> "store_4"[color=blue dir=black]
+"alloca_0" -> "store_4"[color=black dir=black label="%1"]
+}

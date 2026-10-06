@@ -1,0 +1,27 @@
+0 store_50 None %45 %43
+1 add_49 %45 %44 %37
+2 load_48 %44 %43
+3 getelementptr_%40_47 %43 %40 %42
+4 sext_46 %42 %41
+5 load_45 %41 %3
+6 getelementptr_@c_44 %40 %39
+7 sext_43 %39 %38
+8 load_42 %38 %2
+9 mul_41 %37 %29 %36
+10 load_40 %36 %35
+11 getelementptr_%32_39 %35 %32 %34
+12 sext_38 %34 %33
+13 load_37 %33 %3
+14 getelementptr_@b_36 %32 %31
+15 sext_35 %31 %30
+16 load_34 %30 %4
+17 load_33 %29 %28
+18 getelementptr_%25_32 %28 %25 %27
+19 sext_31 %27 %26
+20 load_30 %26 %4
+21 getelementptr_@a_29 %25 %24
+22 sext_28 %24 %23
+23 load_27 %23 %2
+24 %3 None LEAF
+25 %2 None LEAF
+26 %4 None LEAF

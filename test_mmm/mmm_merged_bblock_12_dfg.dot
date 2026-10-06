@@ -1,0 +1,15 @@
+digraph G {
+compound=true
+label="Black Edges - Data-Flow"
+"0" -> "store_22"[color=blue dir=black]
+"%4" -> "store_22"[color=blue dir=black]
+"0" -> "store_21"[color=blue dir=black]
+"getelementptr_%15_20" -> "store_21"[color=black dir=black label="%18"]
+"getelementptr_@c_17" -> "getelementptr_%15_20"[color=black dir=black label="%15"]
+"sext_19" -> "getelementptr_%15_20"[color=black dir=black label="%17"]
+"load_18" -> "sext_19"[color=black dir=black label="%16"]
+"%3" -> "load_18"[color=blue dir=black]
+"sext_16" -> "getelementptr_@c_17"[color=black dir=black label="%14"]
+"load_15" -> "sext_16"[color=black dir=black label="%13"]
+"%2" -> "load_15"[color=blue dir=black]
+}

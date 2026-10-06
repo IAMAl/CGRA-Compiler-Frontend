@@ -1,0 +1,104 @@
+program mmm_merged
+
+begin function @main
+
+begin bblock entry
+['alloca', '%1', None, [], 'i32, align 4', None, None, False, '  %1 = alloca i32, align 4']
+['alloca', '%2', None, [], 'i32, align 4', None, None, False, '  %2 = alloca i32, align 4']
+['alloca', '%3', None, [], 'i32, align 4', None, None, False, '  %3 = alloca i32, align 4']
+['alloca', '%4', None, [], 'i32, align 4', None, None, False, '  %4 = alloca i32, align 4']
+['store', None, 'i32*', ['0', '%1'], None, None, None, True, '  store i32 0, i32* %1, align 4']
+['store', None, 'i32*', ['0', '%2'], None, None, None, True, '  store i32 0, i32* %2, align 4']
+['jmp', None, None, [], None, 'label:<5>', 'label:<5>', False, '  br label %5']
+end bblock entry
+
+begin bblock 5
+['load', '%6', 'i32', ['%2'], None, None, None, False, '  %6 = load i32, i32* %2, align 4']
+['icmp_slt', '%7', 'i32', ['%6', '32'], 'slt', None, None, True, '  %7 = icmp slt i32 %6, 32']
+['br', None, None, ['%7'], None, 'label:<8>', 'label:<55>', False, '  br i1 %7, label %8, label %55']
+end bblock 5
+
+begin bblock 8
+['store', None, 'i32*', ['0', '%3'], None, None, None, True, '  store i32 0, i32* %3, align 4']
+['jmp', None, None, [], None, 'label:<9>', 'label:<9>', False, '  br label %9']
+end bblock 8
+
+begin bblock 9
+['load', '%10', 'i32', ['%3'], None, None, None, False, '  %10 = load i32, i32* %3, align 4']
+['icmp_slt', '%11', 'i32', ['%10', '32'], 'slt', None, None, True, '  %11 = icmp slt i32 %10, 32']
+['br', None, None, ['%11'], None, 'label:<12>', 'label:<52>', False, '  br i1 %11, label %12, label %52']
+end bblock 9
+
+begin bblock 12
+['load', '%13', 'i32', ['%2'], None, None, None, False, '  %13 = load i32, i32* %2, align 4']
+['sext', '%14', 'i64', ['%13'], 'i32 to i64', None, None, False, '  %14 = sext i32 %13 to i64']
+['getelementptr_@c', '%15', '[32 x [32 x i32]]', ['%14'], '[32 x [32 x i32]]', None, None, True, '  %15 = getelementptr inbounds [32 x [32 x i32]], [32 x [32 x i32]]* @c, i64 0, i64 %14']
+['load', '%16', 'i32', ['%3'], None, None, None, False, '  %16 = load i32, i32* %3, align 4']
+['sext', '%17', 'i64', ['%16'], 'i32 to i64', None, None, False, '  %17 = sext i32 %16 to i64']
+['getelementptr_%15', '%18', '[32 x i32]', ['%15', '%17'], '[32 x i32]', None, None, True, '  %18 = getelementptr inbounds [32 x i32], [32 x i32]* %15, i64 0, i64 %17']
+['store', None, 'i32*', ['0', '%18'], None, None, None, True, '  store i32 0, i32* %18, align 4']
+['store', None, 'i32*', ['0', '%4'], None, None, None, True, '  store i32 0, i32* %4, align 4']
+['jmp', None, None, [], None, 'label:<19>', 'label:<19>', False, '  br label %19']
+end bblock 12
+
+begin bblock 19
+['load', '%20', 'i32', ['%4'], None, None, None, False, '  %20 = load i32, i32* %4, align 4']
+['icmp_slt', '%21', 'i32', ['%20', '32'], 'slt', None, None, True, '  %21 = icmp slt i32 %20, 32']
+['br', None, None, ['%21'], None, 'label:<22>', 'label:<49>', False, '  br i1 %21, label %22, label %49']
+end bblock 19
+
+begin bblock 22
+['load', '%23', 'i32', ['%2'], None, None, None, False, '  %23 = load i32, i32* %2, align 4']
+['sext', '%24', 'i64', ['%23'], 'i32 to i64', None, None, False, '  %24 = sext i32 %23 to i64']
+['getelementptr_@a', '%25', '[32 x [32 x i32]]', ['%24'], '[32 x [32 x i32]]', None, None, True, '  %25 = getelementptr inbounds [32 x [32 x i32]], [32 x [32 x i32]]* @a, i64 0, i64 %24']
+['load', '%26', 'i32', ['%4'], None, None, None, False, '  %26 = load i32, i32* %4, align 4']
+['sext', '%27', 'i64', ['%26'], 'i32 to i64', None, None, False, '  %27 = sext i32 %26 to i64']
+['getelementptr_%25', '%28', '[32 x i32]', ['%25', '%27'], '[32 x i32]', None, None, True, '  %28 = getelementptr inbounds [32 x i32], [32 x i32]* %25, i64 0, i64 %27']
+['load', '%29', 'i32', ['%28'], None, None, None, False, '  %29 = load i32, i32* %28, align 4']
+['load', '%30', 'i32', ['%4'], None, None, None, False, '  %30 = load i32, i32* %4, align 4']
+['sext', '%31', 'i64', ['%30'], 'i32 to i64', None, None, False, '  %31 = sext i32 %30 to i64']
+['getelementptr_@b', '%32', '[32 x [32 x i32]]', ['%31'], '[32 x [32 x i32]]', None, None, True, '  %32 = getelementptr inbounds [32 x [32 x i32]], [32 x [32 x i32]]* @b, i64 0, i64 %31']
+['load', '%33', 'i32', ['%3'], None, None, None, False, '  %33 = load i32, i32* %3, align 4']
+['sext', '%34', 'i64', ['%33'], 'i32 to i64', None, None, False, '  %34 = sext i32 %33 to i64']
+['getelementptr_%32', '%35', '[32 x i32]', ['%32', '%34'], '[32 x i32]', None, None, True, '  %35 = getelementptr inbounds [32 x i32], [32 x i32]* %32, i64 0, i64 %34']
+['load', '%36', 'i32', ['%35'], None, None, None, False, '  %36 = load i32, i32* %35, align 4']
+['mul', '%37', 'i32', ['%29', '%36'], 'nsw', None, None, False, '  %37 = mul nsw i32 %29, %36']
+['load', '%38', 'i32', ['%2'], None, None, None, False, '  %38 = load i32, i32* %2, align 4']
+['sext', '%39', 'i64', ['%38'], 'i32 to i64', None, None, False, '  %39 = sext i32 %38 to i64']
+['getelementptr_@c', '%40', '[32 x [32 x i32]]', ['%39'], '[32 x [32 x i32]]', None, None, True, '  %40 = getelementptr inbounds [32 x [32 x i32]], [32 x [32 x i32]]* @c, i64 0, i64 %39']
+['load', '%41', 'i32', ['%3'], None, None, None, False, '  %41 = load i32, i32* %3, align 4']
+['sext', '%42', 'i64', ['%41'], 'i32 to i64', None, None, False, '  %42 = sext i32 %41 to i64']
+['getelementptr_%40', '%43', '[32 x i32]', ['%40', '%42'], '[32 x i32]', None, None, True, '  %43 = getelementptr inbounds [32 x i32], [32 x i32]* %40, i64 0, i64 %42']
+['load', '%44', 'i32', ['%43'], None, None, None, False, '  %44 = load i32, i32* %43, align 4']
+['add', '%45', 'i32', ['%44', '%37'], 'nsw', None, None, False, '  %45 = add nsw i32 %44, %37']
+['store', None, 'i32*', ['%45', '%43'], None, None, None, False, '  store i32 %45, i32* %43, align 4']
+['jmp', None, None, [], None, 'label:<46>', 'label:<46>', False, '  br label %46']
+end bblock 22
+
+begin bblock 46
+['load', '%47', 'i32', ['%4'], None, None, None, False, '  %47 = load i32, i32* %4, align 4']
+['add', '%48', 'i32', ['%47', '1'], 'nsw', None, None, True, '  %48 = add nsw i32 %47, 1']
+['store', None, 'i32*', ['%48', '%4'], None, None, None, False, '  store i32 %48, i32* %4, align 4']
+['jmp', None, None, [], None, 'label:<19>', 'label:<19>', False, '  br label %19']
+end bblock 46
+
+begin bblock 49
+['load', '%50', 'i32', ['%3'], None, None, None, False, '  %50 = load i32, i32* %3, align 4']
+['add', '%51', 'i32', ['%50', '1'], 'nsw', None, None, True, '  %51 = add nsw i32 %50, 1']
+['store', None, 'i32*', ['%51', '%3'], None, None, None, False, '  store i32 %51, i32* %3, align 4']
+['jmp', None, None, [], None, 'label:<9>', 'label:<9>', False, '  br label %9']
+end bblock 49
+
+begin bblock 52
+['load', '%53', 'i32', ['%2'], None, None, None, False, '  %53 = load i32, i32* %2, align 4']
+['add', '%54', 'i32', ['%53', '1'], 'nsw', None, None, True, '  %54 = add nsw i32 %53, 1']
+['store', None, 'i32*', ['%54', '%2'], None, None, None, False, '  store i32 %54, i32* %2, align 4']
+['jmp', None, None, [], None, 'label:<5>', 'label:<5>', False, '  br label %5']
+end bblock 52
+
+begin bblock 55
+['load', '%56', 'i32', ['%1'], None, None, None, False, '  %56 = load i32, i32* %1, align 4']
+['ret', None, 'i32', ['%56'], None, None, None, False, '  ret i32 %56']
+end bblock 55
+
+end function @main

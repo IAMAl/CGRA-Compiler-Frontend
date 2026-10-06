@@ -1,0 +1,8 @@
+digraph G {
+compound=true
+label="Black Edges - Data-Flow"
+"icmp_slt_25" -> "br_26"[color=black dir=black label="%21"]
+"load_24" -> "icmp_slt_25"[color=black dir=black label="%20"]
+"32" -> "icmp_slt_25"[color=blue dir=black]
+"%4" -> "load_24"[color=blue dir=black]
+}

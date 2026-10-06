@@ -1,0 +1,9 @@
+br_23 label:<19>
+store_22 0 %4 0
+store_21 0 0 %18
+getelementptr_%15_20 %18 %15 %17
+sext_19 %17 %16
+load_18 %16 %3
+getelementptr_@c_17 %15 %14
+sext_16 %14 %13
+load_15 %13 %2
