@@ -599,17 +599,6 @@ orchestrator itself calls.
 
 ---
 
-## Support
-
-For issues, questions, or contributions:
-- Check existing issues: https://github.com/IAMAl/ElectronNest/issues
-- Report bugs with full error output and pipeline stage
-- Include LLVM IR sample if possible
-
----
-
 ## License
 
 GNU AFFERO GENERAL PUBLIC LICENSE version 3.0
-
-Copyright (C) 2024 Shigeyuki TAKANO
